@@ -6,11 +6,12 @@ WiiSphere is a great tool to extract or mod your Wii / Gamecube
 games / ROMs.
 
 ### Options:
-
+```
 Extracting ROM Files  - **Work**
 Compressing ROM Files - **Coming soon**
 Modifying ROM data    - **Coming soon**
 Dump ROM information  - **Work**
+```
 
 ### Installation:
 ```

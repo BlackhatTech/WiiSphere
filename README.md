@@ -3,7 +3,7 @@
 **DISCLAIMER**: This tool is for educational purposes **ONLY**. (Read the LICENSE)
 
 WiiSphere is a great tool to extract or mod your Wii / Gamecube
-games / ROMs.
+games / ROMs. (Or Model ripping)
 
 ### Options:
 ```

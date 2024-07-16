@@ -9,7 +9,7 @@ void banner(void) {
         printf(" |__/|__/_/_/ /___/ .__/_//_/\\__/_/  \\__/ \n");
         printf("                 /_/ Using Wiimms ISO Tools\n\n");
         printf(" %s%sNintendo%s%s Wii & Gamecube ROM modding toolkit.\n", BOLD, ANSI_COLOR_RED, ANSI_COLOR_RESET, BOLD_RESET);
-	printf("    by https://github.com/RussianHzcker/\n\n");
+	printf("    by $pectr4\n\n");
 }
 
 void help(void) {

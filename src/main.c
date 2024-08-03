@@ -17,6 +17,13 @@ int main(int argc, char* argv[]) {
 	}
 	char* rom = argv[1];
 	banner();
+	
+	char output_dir[BUFFER];
+	char output_file[BUFFER];
+	char output_format[BUFFER];
+	char output_full[BUFFER];
+	char extracted_folder[BUFFER];
+
 	while (true) {
 		char buffer[BUFFER];
 		printf(" WiiSphere > ");
@@ -25,23 +32,44 @@ int main(int argc, char* argv[]) {
 
 		if (strcmp(buffer, "clear") == 0) {
 			banner();
-		} else if (strcmp(buffer, "help") == 0) {
+		} 
+		else if (strcmp(buffer, "help") == 0) {
 			help();
-		} else if (strcmp(buffer, "exit") == 0) {
+		} 
+		else if (strcmp(buffer, "exit") == 0) {
 			printf("\n Thanks for using WiiSphere <3\n");
 			exit(EXIT_SUCCESS);
-		} else if (strcmp(buffer, "extract-rom") == 0) {
-			char output_dir[BUFFER];
+		} 
+		else if (strcmp(buffer, "extract-rom") == 0) {
 			printf(" Enter output directory > ");
 			fgets(output_dir, sizeof(output_dir), stdin);
 			output_dir[strcspn(output_dir, "\n")] = '\0';
 			extract_rom(rom, output_dir);
-		} else if (strcmp(buffer, "modify-rom") == 0) {
+		} 
+		else if (strcmp(buffer, "modify-rom") == 0) {
 			modify_rom(rom);
-		} else if (strcmp(buffer, "dump-rom") == 0) {
+		} 
+		else if (strcmp(buffer, "dump-rom") == 0) {
 			dump_rom(rom);
-		} else if (strcmp(buffer, "compress-rom") == 0) {
-			compress_rom(rom, "");
+		}
+		else if (strcmp(buffer, "rebuild-rom") == 0) {
+			printf(" Enter the extracted folder's name: ");
+			fgets(extracted_folder, sizeof(extracted_folder), stdin);
+			extracted_folder[strcspn(extracted_folder, "\n")] = '\0';
+			
+			printf(" Enter output file name (without file extension, for example: mariokart): ");
+			fgets(output_file, sizeof(output_file), stdin);
+			output_file[strcspn(output_file, "\n")] = '\0';
+			
+			printf(" Enter file extension supported by wit (for example: .iso or .wbfs): ");
+			fgets(output_format, sizeof(output_format), stdin);
+			output_format[strcspn(output_format, "\n")] = '\0';
+			
+			snprintf(output_full, sizeof(output_full), "%s.%s", output_file, output_format);
+			rebuild_rom(extracted_folder, output_full, output_format);
+		}
+		else if (strcmp(buffer, "patch-wiimmfi" == 0)) {
+			patch_wiimmfi(rom);
 		}
 
 	}

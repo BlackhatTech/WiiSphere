@@ -8,7 +8,7 @@
 #define BUFFER 1024
 
 int patch_wiimmfi(char* rom) {
-	char* command[BUFFER];
+	char command[BUFFER];
 	snprintf(command, sizeof(command), "wit copy %s wiimmfi-%s --wiimmfi", rom, rom);
 	system(command);
 	printf("Game successfully patched with wiimmfi. File 'wiimmfi-%s' created.", rom);
@@ -16,14 +16,15 @@ int patch_wiimmfi(char* rom) {
 }
 
 int extract_rom(char* rom, char* output_dir) {
-	char* command[BUFFER];
+	char command[BUFFER];
 	snprintf(command, sizeof(command), "wit extract %s %s", rom, output_dir);
 	system(command);
 	return 0;
 }
 
-int compress_rom(char* rom, char* output_dir) {
-	printf("COMING SOON\n");
+int rebuild_rom(char* folder, char* output, char* format) {
+	char command[BUFFER];
+	snprintf(command, sizeof(command), "wit copy %s %s --%s", folder, output, format);
 	return 0;
 }
 
@@ -33,7 +34,7 @@ int modify_rom(char* rom) {
 }
 
 int dump_rom(char* rom) {
-	char* command[BUFFER];
+	char command[BUFFER];
 	snprintf(command, sizeof(command), "wit dump %s", rom);
 	system(command);
 	return 0;

@@ -29,7 +29,8 @@ void help(void) {
 	printf("    dump-rom               Dump ROM data.\n");
 	printf("    modify-rom             Opens a dialogue to modify ROM data.\n");
 	printf("    extract-rom            Extracts the ROM (like models, audio tracks, etc...)\n");
-	printf("    compress-rom           Compresses the extracted ROM.\n");
+	printf("    rebuild-rom            Rebuilds the ROM from the extracted folder.\n");
+	printf("    patch-wiimmfi          Patch ROM with external wiimmfi online services.\n");
 	printf("\n");
 }
 

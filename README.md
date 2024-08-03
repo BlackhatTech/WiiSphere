@@ -6,11 +6,11 @@ Wii / Gamecube game model ripping and modding made easy using Wiimms ISO Tools.
 
 ### Options:
 ```
-Extracting game files    - **Work**
-Compressing game files   - **Coming soon**
-Modifying game data      - **Coming soon**
-Dump game information    - **Work**
-Patch games with wiimmfi - **Work**
+Extracting game files                 - **Works**
+Rebuilding game from extracted folder - **Works**
+Modifying game data (like DiscID)     - **Coming soon**
+Dump game information                 - **Works**
+Patch games with wiimmfi              - **Works**
 ```
 
 

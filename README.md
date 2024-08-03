@@ -2,7 +2,7 @@
 
 **DISCLAIMER**: This tool is for educational purposes **ONLY** and I am not supporting piracy. (Read the LICENSE)
 
-Wii and Gamecube model ripping and game modding made easy using Wiimms ISO Tools.
+Wii / Gamecube game model ripping and modding made easy using Wiimms ISO Tools.
 
 ### Options:
 ```
